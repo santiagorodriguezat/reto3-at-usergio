@@ -1,14 +1,16 @@
 package com.usergio.admincar.CarController;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/Car")
 public class CarController {
-    @GetMapping("/car")
-    public String obtenerCar(){
-        return "Hola mundo";
-    }
+
+    @Autowired carService;
+
+    @GetMapping("/all")
+
 }
